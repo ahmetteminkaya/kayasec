@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAYASEC – Siber Güvenlik</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#0e0e10',
+              surface: '#1e293b',
+              primary: '#38bdf8',
+              secondary: '#7c3aed',
+              accent: '#14b8a6',
+              textPrimary: '#f1f5f9',
+              textSecondary: '#94a3b8',
+            },
+            fontFamily: {
+              display: ['Orbitron', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-textPrimary dark:bg-white dark:text-black transition-colors duration-300">
+    <nav class="flex justify-between items-center px-6 py-4 bg-[#1a1a1f] dark:bg-gray-100 shadow-md sticky top-0 z-50">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="KAYASEC Logo" class="h-12 mt-1 brightness-100" />
+        <span class="text-3xl font-display font-bold text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">KAYASEC</span>
+      </div>
+      <div class="space-x-6 hidden md:flex items-center text-textSecondary dark:text-gray-700">
+        <a href="#hakkimda" class="hover:text-primary">Hakkımda</a>
+        <a href="#hizmetler" class="hover:text-primary">Hizmetler</a>
+        <a href="#iletisim" class="hover:text-primary">İletişim</a>
+        <button onclick="toggleDark()" class="ml-4 text-xl">🌙</button>
+      </div>
+    </nav>
+
+    <section class="text-center py-24 px-6" data-aos="fade-up">
+      <h1 class="text-5xl md:text-6xl font-display font-bold bg-gradient-to-r from-primary via-accent to-secondary text-transparent bg-clip-text mb-6">Dijital Güvenliğiniz İçin Buradayım</h1>
+      <p class="text-xl text-textSecondary dark:text-gray-700 mb-8 max-w-2xl mx-auto">Profesyonel sızma testi ve siber güvenlik çözümleriyle sistemlerinizi tehditlere karşı güçlendiriyorum.</p>
+      <a href="#iletisim" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-full transition-all duration-300">Ücretsiz Ön Analiz Al</a>
+    </section>
+
+    <footer class="text-center text-sm text-gray-600 py-6 dark:text-gray-700">
+      &copy; 2025 KAYASEC. Tüm hakları saklıdır.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function toggleDark() {
+        document.documentElement.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>

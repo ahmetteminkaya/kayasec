@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KAYASEC – Siber güvenlik, pentest ve bug bounty hizmetleri sunar.">
+    <meta name="keywords" content="siber güvenlik, pentest, bug bounty, KAYASEC">
+    <meta name="author" content="Ahmet Emin Kaya">
+    <title>KAYASEC – Siber Güvenlik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: '#0e0e10',
+              surface: '#1e293b',
+              lightBackground: '#f9fafb',
+              lightSurface: '#e5e7eb',
+              primary: '#38bdf8',
+              secondary: '#7c3aed',
+              accent: '#14b8a6',
+              textPrimary: '#f1f5f9',
+              textSecondary: '#94a3b8',
+              lightText: '#1f2937',
+              lightTextSecondary: '#4b5563'
+            },
+            fontFamily: {
+              display: ['Orbitron', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-background dark:bg-lightBackground text-textPrimary dark:text-lightText transition-colors">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-[#1a1a1f] dark:bg-lightSurface shadow-md sticky top-0 z-50">
+      <div class="flex items-center space-x-4">
+        <img src="logo.png" alt="KAYASEC Logo" class="h-16" style="margin-top: 4px;" />
+        <span class="text-3xl font-display font-bold text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">KAYASEC</span>
+      </div>
+      <button id="themeToggle" aria-label="Tema değiştir" class="text-2xl transition-transform duration-300 transform hover:scale-125">
+        <span id="themeEmoji">🌙</span>
+      </button>
+    </nav>
+
+    <div class="space-x-6 mt-4 flex justify-center text-textSecondary dark:text-lightTextSecondary">
+      <a href="#hakkimda" class="hover:text-primary">Hakkımda</a>
+      <a href="#hizmetler" class="hover:text-primary">Hizmetler</a>
+      <a href="#iletisim" class="hover:text-primary">İletişim</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="text-center py-24 px-6 bg-gradient-to-br from-[#0e0e10] to-[#1e1e26] dark:from-[#f9fafb] dark:to-[#e5e7eb]" data-aos="fade-up">
+      <h1 class="text-5xl md:text-6xl font-display font-bold bg-gradient-to-r from-primary via-accent to-secondary text-transparent bg-clip-text mb-6">Dijital Güvenliğiniz İçin Buradayım</h1>
+      <p class="text-xl text-textSecondary dark:text-lightTextSecondary mb-8 max-w-2xl mx-auto">Profesyonel sızma testi ve siber güvenlik çözümleriyle sistemlerinizi tehditlere karşı güçlendiriyorum.</p>
+      <a href="#iletisim" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-full transition-all duration-300">Ücretsiz Ön Analiz Al</a>
+    </section>
+
+    <!-- Neden Ben -->
+    <section class="max-w-4xl mx-auto px-6 py-20" data-aos="fade-up">
+      <h2 class="text-3xl font-display font-bold mb-6 text-primary text-center">Neden KAYASEC?</h2>
+      <p class="text-textSecondary dark:text-lightTextSecondary leading-relaxed text-center">Gerçek dünyada test edilmiş tecrübelerle, saldırgan gibi düşünerek sistemlerinizi korurum. Sadece teknik rapor değil, çözüm odaklı rehberlik de sunarım.</p>
+    </section>
+
+    <!-- Hakkımda -->
+    <section id="hakkimda" class="max-w-4xl mx-auto px-6 py-20" data-aos="fade-right">
+      <h2 class="text-3xl font-display font-bold mb-6 text-primary">Hakkımda</h2>
+      <p class="text-textSecondary dark:text-lightTextSecondary leading-relaxed">
+        Ben Ahmet Emin Kaya. KAYASEC markası altında küçük ve orta ölçekli işletmelere siber güvenlik hizmeti veriyorum. Pentest, bug bounty ve sızma testi konularında gerçek dünya tecrübesine sahibim. Amacım sadece zafiyetleri tespit etmek değil, müşteriye yol gösterip güvenlik farkındalığını da artırmak.
+      </p>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="bg-[#1a1a1f] dark:bg-lightSurface py-20 px-6" data-aos="zoom-in">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-display font-bold mb-10 text-primary text-center">Hizmetler</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="bg-surface dark:bg-lightBackground p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl mb-2">💻</div>
+            <h3 class="text-xl font-semibold mb-2">Web Uygulama Pentest</h3>
+            <p class="text-textSecondary dark:text-lightTextSecondary text-sm">OWASP Top 10 başta olmak üzere uygulamanızın her katmanında derinlemesine güvenlik analizi.</p>
+          </div>
+          <div class="bg-surface dark:bg-lightBackground p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl mb-2">📱</div>
+            <h3 class="text-xl font-semibold mb-2">Mobil Uygulama Analizi</h3>
+            <p class="text-textSecondary dark:text-lightTextSecondary text-sm">Android/iOS uygulamalar için statik ve dinamik analiz, API testleri ve veri sızıntısı kontrolleri.</p>
+          </div>
+          <div class="bg-surface dark:bg-lightBackground p-6 rounded-lg shadow hover:shadow-xl hover:-translate-y-1 transition-all" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl mb-2">🕵️‍♂️</div>
+            <h3 class="text-xl font-semibold mb-2">Red Team / Sosyal Mühendislik</h3>
+            <p class="text-textSecondary dark:text-lightTextSecondary text-sm">Gerçek hayata yakın saldırı senaryolarıyla organizasyonunuzun farkındalık ve dayanıklılığını ölçüyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="max-w-3xl mx-auto px-6 py-20" data-aos="fade-left">
+      <h2 class="text-3xl font-display font-bold mb-6 text-primary">İletişim</h2>
+      <form class="space-y-6">
+        <input type="text" placeholder="Adınız" class="w-full p-3 rounded bg-surface dark:bg-lightBackground text-white dark:text-black placeholder-gray-500" required>
+        <input type="email" placeholder="E-posta adresiniz" class="w-full p-3 rounded bg-surface dark:bg-lightBackground text-white dark:text-black placeholder-gray-500" required>
+        <textarea placeholder="Mesajınız" class="w-full p-3 rounded bg-surface dark:bg-lightBackground text-white dark:text-black placeholder-gray-500 h-32" required></textarea>
+        <button type="submit" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded transition">Gönder</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-600 py-6 dark:text-gray-400">
+      &copy; 2025 KAYASEC. Tüm hakları saklıdır.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script>
+      const toggle = document.getElementById('themeToggle');
+      const emoji = document.getElementById('themeEmoji');
+      const html = document.documentElement;
+      toggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        emoji.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+      });
+    </script>
+  </body>
+</html>
